@@ -24,13 +24,13 @@ const SearchResults = () => {
         }
     }, [searchTerm])
     const truncateSummary = (summary, maxLength = 100) => {
-        if (!summary) return ''; // Retourne une chaîne vide si le résumé est undefined ou null
-        const strippedSummary = summary.replace(/<[^>]+>/g, ''); // Supprime les balises HTML
-        if (strippedSummary.length <= maxLength) return strippedSummary; // Retourne le résumé s'il est assez court
-        return `${strippedSummary.substring(0, maxLength)}...`; // Tronque et ajoute des points de suspension
+        if (!summary) return '';
+        const strippedSummary = summary.replace(/<[^>]+>/g, '');
+        if (strippedSummary.length <= maxLength) return strippedSummary;
+        return `${strippedSummary.substring(0, maxLength)}...`;
     };
     const redirectToDetails = (id) => {
-        navigate(`/show/${id}`); // Utilisez le chemin défini pour les détails du film
+        navigate(`/show/${id}`);
     };
     return (
         <div>

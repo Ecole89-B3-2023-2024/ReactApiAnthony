@@ -5,10 +5,10 @@ import axios from 'axios';
 const ShowDetails = () => {
     const navigate = useNavigate();
     const { id } = useParams();
-    const [show, setShow] = useState(null); // Détails du spectacle
-    const [episodes, setEpisodes] = useState([]); // Tous les épisodes
-    const [selectedSeason, setSelectedSeason] = useState(''); // Saison sélectionnée par l'utilisateur
-    const [seasons, setSeasons] = useState([]); // Liste des saisons disponibles
+    const [show, setShow] = useState(null);
+    const [episodes, setEpisodes] = useState([]);
+    const [selectedSeason, setSelectedSeason] = useState('');
+    const [seasons, setSeasons] = useState([]);
 
     useEffect(() => {
         const fetchShowDetails = async () => {

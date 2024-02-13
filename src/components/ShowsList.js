@@ -18,8 +18,8 @@ const ShowsList = () => {
         getShows();
     }, []);
     const hoverAnimation = {
-        scale: 1.05, // Légèrement agrandir la carte
-        transition: { duration: 0.3 }, // Durée de l'animation
+        scale: 1.05,
+        transition: { duration: 0.3 },
     };
     const truncateSummary = (summary, maxLength = 100) => {
         if (!summary) return '';
